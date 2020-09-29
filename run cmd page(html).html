@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<Html>
+<head>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('voice-form'); 
+    const input = document.getElementById('speech');
+
+    form.addEventListener('submit', event => {
+      //event.preventDefault();
+      const toSay = input.value.trim();
+      const utterance = new SpeechSynthesisUtterance(toSay);
+      speechSynthesis.speak(utterance);
+      input.value = (x);
+    });
+  });
+</script>
+
+<form id="voice-form" action='http://192.168.1.102/cgi-bin/task2.py'> <br />
+<h1 style=" align:center ">Welcome To My HTML Page </h1>
+<b> Enter Your Command : <b /> <input id="speech" name='c' type='text' />
+<br />
+<br />
+<div style="text-align:center">
+
+<input type="submit"value="Run">
+</div>
+
+</head>
+<body bgcolor='yellow'>
+
+<form>
+</hmtl>
